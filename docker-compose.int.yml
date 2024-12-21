@@ -1,0 +1,7 @@
+services:
+  cryptopang-app:
+    container_name: cryptopang-app
+    restart: always
+    build: ./
+    ports:
+      - "4004:80"

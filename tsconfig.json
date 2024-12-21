@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx", // O "react" si usas React 16 o inferior
+    "target": "ESNext", // Asegura compatibilidad moderna
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "composite": false,
+  },
+  "include": ["src/**/*", "__tests__/**/*", ".storybook/**/*"]
+}

@@ -17,9 +17,9 @@ import {
 } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { id: 1, name: 'Overview', href: '/', icon: HomeIcon, current: true },
-  { id: 2, name: 'mint', href: '/mint', icon: UsersIcon, current: false },
-  { id: 3, name: 'Play', href: '/play', icon: FolderIcon, current: false },
+  { id: 1, name: 'Overview', href: '/', icon: <HomeIcon className='w-32 h-32 rounded-full' height={32} width={32} />, current: true },
+  { id: 2, name: 'mint', href: '/mint', icon: <UsersIcon className='w-32 h-32 rounded-full' height={32} width={32} />, current: false },
+  { id: 3, name: 'Play', href: '/play', icon: <FolderIcon className='w-32 h-32 rounded-full' height={32} width={32} />, current: false },
 ]
 const teams = [
   { id: 1, name: '0x1234...5678', href: '#', initial: '#01', current: false },
@@ -228,7 +228,8 @@ export default function PageBase({ children }: { children: ReactNode }) {
                     <img
                       alt=''
                       src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-                      className='size-8 rounded-full bg-gray-50'
+                      // fill in the image URL
+                      className='w-8 h-8 rounded-full'
                     />
                     <span className='sr-only'>Your profile</span>
                     <span aria-hidden='true'>Tom Cook</span>
@@ -256,7 +257,7 @@ export default function PageBase({ children }: { children: ReactNode }) {
             <img
               alt=''
               src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-              className='size-8 rounded-full bg-gray-50'
+              className='size-8 w-8 h-8 rounded-full bg-gray-50'
             />
           </a>
         </div>

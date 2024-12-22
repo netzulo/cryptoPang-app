@@ -1,13 +1,14 @@
 'use client'
 
-import { Suspense, useState } from 'react'
+import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/cannon'
 import PageBase from './PageBase'
 import Background from '../../components/features/game/Background'
 import Player from '../../components/features/game/Player'
 import Ground from '../../components/features/game/Ground'
-import { OrbitControls } from '@react-three/drei'
+import Ball from '../../components/features/game/Ball'
+// import { OrbitControls } from '@react-three/drei'
 
 export default function PagePlay() {
   return (
@@ -31,6 +32,11 @@ export default function PagePlay() {
           <pointLight position={[10, 10, 10]} />
           <Physics gravity={[0, -9.8, 0]}>
             <Ground />
+
+            <Ball position={[0, 9, 0]} color="red" />
+            <Ball position={[2, 12, 0]} color="blue" />
+            <Ball position={[-2, 15, 0]} color="gray" />
+
             <Player />
           </Physics>
 
